@@ -44,5 +44,3 @@ def get_melon_by_id(id):
 
 def get_melon_list():
     return list(melon_dict.values())
-
-print(get_melon_list())

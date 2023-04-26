@@ -1,5 +1,6 @@
 from flask import Flask, render_template, redirect, flash, request
 import jinja2
+from melons import get_melon_list
 
 app = Flask(__name__)
 app.jinja_env.undefined = jinja2.StrictUndefined # for debugging purposes
@@ -12,7 +13,9 @@ def homepage():
 @app.route('/melons')
 def all_melons():
     '''Return a page showing all melons available for purchase'''
-    return render_template("all_melons.html")
+    
+    melon_list = get_melon_list()
+    return render_template("all_melons.html", melon_list=melon_list)
 
 @app.route('/melon/<melon_id>')
 def melon_details(melon_id):
