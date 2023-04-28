@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, flash, request, session
 import jinja2
 from melons import get_melon_list, get_melon_by_id
+from forms import LoginForm
 
 app = Flask(__name__)
 app.secret_key = 'dev'
@@ -10,6 +11,12 @@ app.jinja_env.undefined = jinja2.StrictUndefined # for debugging purposes
 @app.route('/')
 def homepage():
     return render_template("base.html")
+
+@app.route('/login', methods=["GET", "POST"])
+def login():
+    '''Log user into site.'''
+    form = LoginForm(request.form)
+    return render_template('login.html', form=form)
 
 @app.route('/melons')
 def all_melons():
