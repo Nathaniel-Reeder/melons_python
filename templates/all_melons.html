@@ -4,7 +4,7 @@
     
 <div id="melon-list">
 {% for melon in melon_list %}
-    <div class="card text-center">
+    <div class="card text-center" id="melon-card">
         <h5>
             <a href="{{ url_for('melon_details', melon_id=melon.melon_id)}}">{{ melon.common_name }}</a>
         </h5>

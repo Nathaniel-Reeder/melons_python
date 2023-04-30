@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<div>
+<div id="individual-melon-card">
     <h5>{{ melon.common_name}}</h5>
     <img src="{{ melon.image_url }}" alt="Image of {{melon.common_name}}" class="melon-image">
     <ul>
@@ -14,7 +14,8 @@
             <li>Warning! This melon has seeds</li>
         {% endif %}
     </ul>
-    <a class="btn btn-primary" href="{{ url_for('add_to_cart', melon_id=melon.melon_id)}}">Add to Cart</a>
+
+    <a class="btn btn-primary" href="{{ url_for('add_to_cart', melon_id=melon.melon_id)}}" id="button">Add to Cart</a>
 </div>
 
 {% endblock %}

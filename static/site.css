@@ -7,3 +7,41 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+#melon-card{
+    margin: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    background-color: #f58f92;
+    color: #b7241b;
+}
+
+#individual-melon-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    background-color: #f58f92;
+    color: #b7241b;
+    width: 30%;
+    position: fixed;
+    left: 33%;
+    right: 33%;
+    top: 10%
+}
+
+#cart-table{
+    background-color: #f58f92;
+}
+
+#button{
+    background-color: #213036;
+    color: #96d800;
+}
+
+body {
+    background-color: #265500;
+    color: #96d800;
+}
+

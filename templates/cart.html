@@ -3,7 +3,7 @@
 {% block body %}
     <h1>Shopping Cart</h1>
 
-    <table class="table table-striped mt-3">
+    <table class="table table-striped mt-3" id="cart-table">
         <thead>
             <tr>
                 <th>Melon Name</th>
@@ -24,6 +24,6 @@
 
     <h3>Total: ${{ "%0.2f" | format(order_total) }}</h3>
 
-    <a href="{{url_for('empty_cart')}}" class="btn btn-primary">Empty Cart</a>
+    <a href="{{url_for('empty_cart')}}" class="btn btn-primary" id="button">Empty Cart</a>
  
 {% endblock %}
